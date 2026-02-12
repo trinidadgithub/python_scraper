@@ -1,0 +1,2223 @@
+<!-- default or usa country view file --> 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TekJobs Resume Search</title>
+
+    <!-- Favicon -->
+    <link href="https://www.tekjobs.net/assets/images/favicon.svg" rel="shortcut icon" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700" rel="stylesheet">
+
+    <!-- CSS Global Compulsory (Do not remove)-->
+    <link rel="stylesheet" href="https://www.tekjobs.net/assets/css/font-awesome/all.min.css" />
+    <link rel="stylesheet" href="https://www.tekjobs.net/assets/css/flaticon/flaticon.css" />
+    <link rel="stylesheet" href="https://www.tekjobs.net/assets/css/bootstrap/bootstrap.min.css" />
+
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" href="https://www.tekjobs.net/assets/css/select2/select2.css" />
+
+    <!-- Template Style -->
+    <link rel="stylesheet" href="https://www.tekjobs.net/assets/css/style.css" />
+  </head>
+<body>
+
+<!--=================================
+header -->
+<header class="header">
+  <nav class="navbar navbar-static-top navbar-expand-lg header-sticky">
+    <div class="container-fluid">
+      <button id="nav-icon4" type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>
+      <a class="navbar-brand" href="https://www.tekjobs.net/employer/searchResume">
+        <img class="img-fluid" src="https://www.tekjobs.net/assets/images/logo-light.svg" alt="logo">
+      </a>
+      <div class="navbar-collapse collapse justify-content-start">
+        <ul class="nav navbar-nav">
+		   <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img class="menu-flag" src="https://www.tekjobs.net/assets/images/res/usa.png">USA
+              </a>
+              <ul class="dropdown-menu">
+               
+                <li><a class="dropdown-item" href="#" target="_blank"><img class="menu-flag" src="https://www.tekjobs.net/assets/images/res/uk.png"> UK</a></li>
+				<li><a class="dropdown-item" href="#" target="_blank"><img class="menu-flag" src="https://www.tekjobs.net/assets/images/res/india.png"> India</a></li>
+				<li><a class="dropdown-item" href="#" target="_blank"><img class="menu-flag" src="https://www.tekjobs.net/assets/images/res/canada.png"> Canada</a></li>
+              </ul>
+          </li> -->
+          <!--<li class="nav-item dropdown">
+            <a class="nav-link" href="https://www.tekjobs.net/employer/searchResume/" id="navbarDropdown" role="button">Search Resume</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="https://www.tekjobs.net/employer/jobs/" id="navbarDropdown" role="button">Post Job</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="https://www.tekjobs.net/employer/searchResume/logout" id="navbarDropdown" role="button"><i class="fas fa-sign-out-alt pr-1"></i> Logout</a>
+          </li> -->
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fab fa-black-tie pr-2"></i>Employer <i class="fas fa-chevron-down fa-xs"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="https://www.tekjobs.net/employer/searchResume" class="dropdown-item">Search Resume</a>
+              </li>
+              <li>
+              <a class="dropdown-item" href="https://www.tekjobs.net/employer/jobs/" id="navbarDropdown" role="button">Post Job</a>
+              </li>
+            </ul>
+          </li>
+		      
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="far fa-user pr-2"></i>Jobseeker <i class="fas fa-chevron-down fa-xs"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="https://www.tekjobs.net/jobs" class="dropdown-item" target="_blank">Search Job</a></li>
+              <li><a class="dropdown-item" href="https://www.tekjobs.net/candidate-registration" target="_blank">Jobseeker Registration</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="https://www.tekjobs.net/employer/searchResume/logout" id="navbarDropdown" role="button"><i class="fas fa-sign-out-alt pr-1"></i> Logout</a>
+          </li>
+	
+          <!-- 
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="https://www.tekjobs.net/employer/dashboard" id="navbarDropdown" role="button">Dashboard</a>
+          </li>
+          <li class="dropdown nav-item ">
+            <a href="https://www.tekjobs.net/employer/searchResume" class="nav-link">Search Resumes</a>
+          </li>
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://www.tekjobs.net/employer/dashboard/postJob">
+              Post Job</a>
+          </li>-->
+         
+        </ul>
+      </div>
+    	 
+    </div>
+  </nav>
+</header>
+<!--=================================
+header -->
+<link rel="stylesheet" type="text/css" href="https://www.tekjobs.net/assets/css/bootstrap-multiselect.css">
+<style type="text/css">
+  .multiselect-container{
+    width: 300px;
+  }
+  .multiselect-item > a,.multiselect-container >li>a{
+    color: black;
+  }
+  .send-mail-to-input {
+    height: 27px;
+    width: 62px;
+    padding: 2px 10px;
+  }
+  .span-offer {
+    text-transform: none;
+    font-size: 0.8em;
+    color: #ff6a6a;
+    margin-right: 3em;
+  }
+</style>
+
+<!--=================================
+banner -->
+<form method="post" id="formCandidateSearch" action="https://www.tekjobs.net/employer/searchResume/index/1/?country=usa">
+
+<section class="header-inr header-inr-big bg-holder text-white" style="background:url('https://www.tekjobs.net/assets//images/res/usa-bg.png') repeat,linear-gradient(90deg, #041e42 20%, #9b1c2c 100%);background-position:right bottom;background-repeat:no-repeat;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">         
+    <div class="p-4">
+          <div class="position-relative">
+            <ul class="nav nav-tabs" id="pills-tab" role="tablist">
+                                    <li class="nav-item mr-1">
+                        <a class="nav-link active" href="#"><img class="menu-flags" src="https://www.tekjobs.net/assets/images/res/usa.png"> USA</a>
+                      </li>
+                          </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="usa" role="tabpanel" aria-labelledby="usa-tab">
+                <div class="job-search-item mt-4">
+          <div class="form row">
+            <div class="col-lg-12 col-md-12">
+            <div class="form-group left-icon">
+                            <input type="text" class="form-control" name="keyword" placeholder="Keyword ',' seperated value OR Use 'AND', 'OR' & 'NOT' operator to perform boolean search" value=''>
+            <i class="fas fa-search"></i> 
+            </div>
+          </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+              <div class="form-group left-icon mb-md-0">
+            <select class="form-control" name="category[]" id="selectCategory" multiple="">
+                            <option value="66a00cc65edecc2e382638a4" >NetSuite</option>
+                            <option value="661d7f3542cdab216e1fa9e6" >ServiceNow</option>
+                            <option value="65ef9dec2952a7563b4b8362" >Power BI</option>
+                            <option value="64fa1c2ed92c7e206364a98f" >SAS</option>
+                            <option value="62869cd70f49ec032f2b1a33" >Software Engineer</option>
+                            <option value="62869c749566310979314e83" >Peoplesoft</option>
+                            <option value="6282b7394bd29d0c89034c53" >Other Category</option>
+                            <option value="60ca8a8609305e399004a573" >Pega</option>
+                            <option value="60b6d8a352489352c757d7b2" >VP strategy and operations</option>
+                            <option value="60a41e048d68dc05a728fe22" >Security Analyst/Cyber Security</option>
+                            <option value="60941e0a9a9d04108e0dac23" >Documentum Specialist </option>
+                            <option value="60883abd2b8c1d5d2926e5b4" >Robotic Process Automation</option>
+                            <option value="6075d0325d6f9721b2475a54" >Data Analyst</option>
+                            <option value="6075aef8bf14426d454baf82" >ReactJs</option>
+                            <option value="606b86fceabf9d02180b54e3" >MULESOFT</option>
+                            <option value="606b25382807c27eec65c2a2" >SAP </option>
+                            <option value="6064ac83886ab959ec64ffe3" >GOLANG</option>
+                            <option value="605b92a16ee4ff5e88447ce3" >Informatica </option>
+                            <option value="605b8d1964e69c59ec34c562" >QA Analyst/Engineer</option>
+                            <option value="605b7cfaf1ee36141e163b72" >Business System Analyst</option>
+                            <option value="605b4625fcadc618d211dfd2" >Data Engineer</option>
+                            <option value="605a3fc079731512f02c13a2" >Oracle</option>
+                            <option value="6059f1fe5d7ba40ef53b3c82" >Tech lead</option>
+                            <option value="6058e5f40baacf2f74491812" >.Net Developer</option>
+                            <option value="603e9f88f087321ad109df93" >MetaSolv Developer</option>
+                            <option value="603e81d216c5ca10522c6a72" >Mobile / iOS / Android </option>
+                            <option value="603d2cfee58041276c67cbc2" >Workday/ Functional</option>
+                            <option value="6019b8bf59f01f75893701d2" >Mainframe</option>
+                            <option value="5fe9f6510c0dfa07be339632" >PHP Developer</option>
+                            <option value="5fe2204908026027dc2800b2" >UI/UX Developer</option>
+                            <option value="5fdd12601222d31c3e1b5034" >Business Analyst </option>
+                            <option value="5fdd11ab01d90552166b7be2" >Network Engineer</option>
+                            <option value="5fdcea151222d31c3e1b5032" >Technical Architect</option>
+                            <option value="5fdcda87b9e06927544df282" >System Engineer </option>
+                            <option value="5fdcda4006144034fb75eda2" >Scrum Master</option>
+                            <option value="5fdcd26e06e4af5a18765252" >Boomi Tibco Webmethods</option>
+                            <option value="5fdcd25ba152ed6e997c11e2" >Project Manager</option>
+                            <option value="5fdcd25097f42416da0881b2" >Data Science/Machine Learning</option>
+                            <option value="5fdcd247aefb8d1450429e82" >Big Data</option>
+                            <option value="5fdcd1fbf0817f46866946f2" >System Engineer/ Admin</option>
+                            <option value="5fdac57b7b94eb7bd71ccd52" >Salesforce</option>
+                            <option value="5fd27c14a57e5847ac385562" >DevOps/Cloud/AWS/Azure/GCP</option>
+                            <option value="5f7a44daba620000f3000770" >Python</option>
+                            <option value="5f62353a423600006e00384d" >Java</option>
+                        </select>
+          </div>
+      </div>          
+        
+          <div class="col-lg-3 col-md-4 col-sm-6 form-group left-icon col-lg">
+            <input type="hidden" name="country[]" id="selectCountry" value="240">
+            <select class="form-control" name="location[]" id="selectoption" multiple="multiple">              <option value="">Select All Locations</option>
+            </select>
+          </div>
+          <div class="col-lg-2 col-md-0">  </div>
+          <div class="col-lg-4 col-md-4 d-flex">     
+            <div class="form-group form-action mb-4">
+              <button type="submit" name="action" value="search" class="btn btn-primary mt-0 px-3"><i class="fas fa-search-location"></i> Search Candidates</button>
+                                                        </div>
+          </div>        
+          </div>
+        </div>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+           
+       </div>
+     
+    </div>
+  </div>
+<div class="space-pbs"></div>
+</section>
+<!--=================================
+banner -->
+<!--=================================
+candidate post-box list -->
+<section class="space-cs">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 mb-0">
+        <div class="sidebar">
+    
+         <h6 class="text-center"><i class="fa fa-filter"></i> Apply Filters</h6>
+    
+          <div class="widget">
+            <div class="widget-title widget-collapse">
+              <h6>Visa Type</h6>
+              <a class="ml-auto" data-toggle="collapse" href="#dateposted" role="button" aria-expanded="false" aria-controls="dateposted"> <i class="fas fa-chevron-down"></i> </a>
+            </div>
+            <div class="collapse show" id="dateposted">
+              <div class="widget-content">
+                                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="visa_select_all" value="" >
+                    <label class="custom-control-label" for="visa_select_all">All</label>
+                  </div>
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="visa_type[]" id="5" value="5" >
+                    <label class="custom-control-label" for="5">Green Card</label>
+                  </div>
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="visa_type[]" id="1601316289" value="1601316289" >
+                    <label class="custom-control-label" for="1601316289">US Citizen</label>
+                  </div>
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="visa_type[]" id="1655554317" value="1655554317" >
+                    <label class="custom-control-label" for="1655554317">H4 - EAD</label>
+                  </div>
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="visa_type[]" id="1655554392" value="1655554392" >
+                    <label class="custom-control-label" for="1655554392">Others</label>
+                  </div>
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="visa_type[]" id="1661541695" value="1661541695" >
+                    <label class="custom-control-label" for="1661541695">H1B</label>
+                  </div>
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="visa_type[]" id="1661541804" value="1661541804" >
+                    <label class="custom-control-label" for="1661541804">TN Visa</label>
+                  </div>
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="visa_type[]" id="1668801628" value="1668801628" >
+                    <label class="custom-control-label" for="1668801628">OPT - EAD</label>
+                  </div>
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="visa_type[]" id="1668801695" value="1668801695" >
+                    <label class="custom-control-label" for="1668801695">L2 - EAD</label>
+                  </div>
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="visa_type[]" id="1668801705" value="1668801705" >
+                    <label class="custom-control-label" for="1668801705">E3 - VISA</label>
+                  </div>
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="visa_type[]" id="1682353447" value="1682353447" >
+                    <label class="custom-control-label" for="1682353447">GC-EAD</label>
+                  </div>
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="visa_type[]" id="1688061178" value="1688061178" >
+                    <label class="custom-control-label" for="1688061178">EAD</label>
+                  </div>
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="visa_type[]" id="1710208451" value="1710208451" >
+                    <label class="custom-control-label" for="1710208451">OPT</label>
+                  </div>
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="visa_type[]" id="1718085974" value="1718085974" >
+                    <label class="custom-control-label" for="1718085974">F1 - VISA</label>
+                  </div>
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="visa_type[]" id="1718138139" value="1718138139" >
+                    <label class="custom-control-label" for="1718138139">F1 - OPT</label>
+                  </div>
+                            </div>
+            </div>
+          </div>
+          <hr>
+          
+          <!-- <div class="widget">
+            <div class="widget-title widget-collapse">
+              <h6>Job Type</h6>
+              <a class="ml-auto" data-toggle="collapse" href="#jobtype" role="button" aria-expanded="false" aria-controls="jobtype"> <i class="fas fa-chevron-down"></i> </a>
+            </div>
+            <div class="collapse show" id="jobtype">
+              <div class="widget-content">
+                <div class="custom-control custom-checkbox fulltime-job">
+                  <input type="checkbox" class="custom-control-input" id="jobtype1">
+                  <label class="custom-control-label" for="jobtype1">Full Time</label>
+                </div>                
+                <div class="custom-control custom-checkbox temporary-job">
+                  <input type="checkbox" class="custom-control-input" id="jobtype4">
+                  <label class="custom-control-label" for="jobtype4">Temporary</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr> -->
+           <div class="widget">
+            <div class="widget-title widget-collapse">
+              <h6>Experience</h6>
+              <a class="ml-auto" data-toggle="collapse" href="#experience" role="button" aria-expanded="false" aria-controls="experience"> <i class="fas fa-chevron-down"></i> </a>
+            </div>
+            <div class="collapse " id="experience">
+        <div class="form-group select-border">
+                <div style="margin-top:1px"><label><!-- Min Experience: --></label></div>
+                <select class="form-control basic-select" name="min_exp">
+                  <option value="-1">Min Exp</option>
+                                        <option value="0">0 years</option>
+                                      <option value="1">1 years</option>
+                                      <option value="2">2 years</option>
+                                      <option value="3">3 years</option>
+                                      <option value="4">4 years</option>
+                                      <option value="5">5 years</option>
+                                      <option value="6">6 years</option>
+                                      <option value="7">7 years</option>
+                                      <option value="8">8 years</option>
+                                      <option value="9">9 years</option>
+                                      <option value="10">10 years</option>
+                                      <option value="11">11 years</option>
+                                      <option value="12">12 years</option>
+                                      <option value="13">13 years</option>
+                                      <option value="14">14 years</option>
+                                      <option value="15">15 years</option>
+                                      <option value="16">16 years</option>
+                                      <option value="17">17 years</option>
+                                      <option value="18">18 years</option>
+                                      <option value="19">19 years</option>
+                                      <option value="20">20 years</option>
+                                      <option value="21">21 years</option>
+                                      <option value="22">22 years</option>
+                                      <option value="23">23 years</option>
+                                      <option value="24">24 years</option>
+                                      <option value="25">25 years</option>
+                                      <option value="26">26 years</option>
+                                      <option value="27">27 years</option>
+                                      <option value="28">28 years</option>
+                                      <option value="29">29 years</option>
+                                      <option value="30">30 years</option>
+                                      <option value="31">31 years</option>
+                                      <option value="32">32 years</option>
+                                      <option value="33">33 years</option>
+                                      <option value="34">34 years</option>
+                                      <option value="35">35 years</option>
+                                      <option value="36">36 years</option>
+                                      <option value="37">37 years</option>
+                                      <option value="38">38 years</option>
+                                      <option value="39">39 years</option>
+                                      <option value="40">40 years</option>
+                                      <option value="41">41 years</option>
+                                      <option value="42">42 years</option>
+                                      <option value="43">43 years</option>
+                                      <option value="44">44 years</option>
+                                </select>
+              </div>
+              <div class="form-group select-border">
+               <!-- <label>Max Experience:</label> -->
+                <select class="form-control basic-select" name="max_exp">
+                  <option value="-1">Max Exp</option>
+                                        <option value="0">0 years</option>
+                                      <option value="1">1 years</option>
+                                      <option value="2">2 years</option>
+                                      <option value="3">3 years</option>
+                                      <option value="4">4 years</option>
+                                      <option value="5">5 years</option>
+                                      <option value="6">6 years</option>
+                                      <option value="7">7 years</option>
+                                      <option value="8">8 years</option>
+                                      <option value="9">9 years</option>
+                                      <option value="10">10 years</option>
+                                      <option value="11">11 years</option>
+                                      <option value="12">12 years</option>
+                                      <option value="13">13 years</option>
+                                      <option value="14">14 years</option>
+                                      <option value="15">15 years</option>
+                                      <option value="16">16 years</option>
+                                      <option value="17">17 years</option>
+                                      <option value="18">18 years</option>
+                                      <option value="19">19 years</option>
+                                      <option value="20">20 years</option>
+                                      <option value="21">21 years</option>
+                                      <option value="22">22 years</option>
+                                      <option value="23">23 years</option>
+                                      <option value="24">24 years</option>
+                                      <option value="25">25 years</option>
+                                      <option value="26">26 years</option>
+                                      <option value="27">27 years</option>
+                                      <option value="28">28 years</option>
+                                      <option value="29">29 years</option>
+                                      <option value="30">30 years</option>
+                                      <option value="31">31 years</option>
+                                      <option value="32">32 years</option>
+                                      <option value="33">33 years</option>
+                                      <option value="34">34 years</option>
+                                      <option value="35">35 years</option>
+                                      <option value="36">36 years</option>
+                                      <option value="37">37 years</option>
+                                      <option value="38">38 years</option>
+                                      <option value="39">39 years</option>
+                                      <option value="40">40 years</option>
+                                      <option value="41">41 years</option>
+                                      <option value="42">42 years</option>
+                                      <option value="43">43 years</option>
+                                      <option value="44">44 years</option>
+                                </select>
+              </div>
+      
+            </div>
+          </div>
+          <hr>          
+          <div class="widget">
+            <div class="widget-title widget-collapse">
+              <h6>Rate Type</h6>
+              <a class="ml-auto" data-toggle="collapse" href="#ratetype" role="button" aria-expanded="false" aria-controls="ratetype"> <i class="fas fa-chevron-down"></i> </a>
+            </div>
+            <div class="collapse " id="ratetype">
+              <div class="widget">
+                <div class="search">            
+                  <input class="form-control mod" type="number" placeholder="Min Range (USD)" name="minRate" min="0" value="">
+                </div>
+              </div>
+              <div class="widget">
+                <div class="search">             
+                  <input class="form-control mod" type="number" placeholder="Max Range (USD)" name="maxRate" min="0" value="">
+                </div>
+              </div>
+              <div class="widget form-group select-border">
+                <select class="form-control basic-select" name="rate_type"> 
+                                    <option value="1600948640" >Hourly</option>
+                                  <option value="1600948652" >Annum</option>
+                                  <option value="1601316376" >W2 Hourly</option>
+                                  <option value="1668801462" >Hourly + Expenses</option>
+                                  <option value="1687014668" >Annum + Benefits</option>
+                                </select>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="widget">
+            <div class="widget-title widget-collapse">
+              <h6>Tax Type</h6>
+              <a class="ml-auto" data-toggle="collapse" href="#tax" role="button" aria-expanded="false" aria-controls="tax">  <i class="fas fa-chevron-down"></i></a>
+            </div>
+            <div class="collapse " id="tax">
+              <div class="widget-content">
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="tax_type[]" id="50" value="50" >
+                    <label class="custom-control-label" for="50">W2</label>
+                  </div>
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="tax_type[]" id="535150232" value="535150232" >
+                    <label class="custom-control-label" for="535150232">C2C</label>
+                  </div>
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="tax_type[]" id="1646888776" value="1646888776" >
+                    <label class="custom-control-label" for="1646888776">Yearly</label>
+                  </div>
+                                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="tax_type[]" id="1668801434" value="1668801434" >
+                    <label class="custom-control-label" for="1668801434">1099</label>
+                  </div>
+                            </div>
+            </div>
+          </div>
+          <hr>
+          <div class="widget">
+            <div class="widget-title widget-collapse">
+              <h6>Willing to Relocate</h6>
+              <a class="ml-auto" data-toggle="collapse" href="#relocate" role="button" aria-expanded="false" aria-controls="relocate"><i class="fas fa-chevron-down"></i></a>
+            </div>
+            <div class="collapse " id="relocate">
+              <div class="widget-content">
+                                <div class="custom-control custom-checkbox">
+                  <input type="radio" class="custom-control-input" name="relocate" id="relocate1" checked value=''>
+                  <label class="custom-control-label" for="relocate1">All</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="radio" class="custom-control-input" name="relocate" id="relocate2"  value='Y'>
+                  <label class="custom-control-label" for="relocate2">Yes</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="radio" class="custom-control-input" name="relocate" id="relocate3"   value='N'>
+                  <label class="custom-control-label" for="relocate3">No</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+           <div class="widget">
+            <div class="widget-title widget-collapse">
+              <h6>Only Locals</h6>
+              <a class="ml-auto" data-toggle="collapse" href="#located" role="button" aria-expanded="false" aria-controls="located"> <i class="fas fa-chevron-down"></i></a>
+            </div>
+            <div class="collapse " id="located">
+              <div class="widget-content">
+                                  <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" name="isOnlyLocal" id="isOnlyLocal"  value="Yes">
+                  <label class="custom-control-label" for="isOnlyLocal">Only Local Candidate</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+           <div class="widget">
+            <div class="widget-title widget-collapse">
+              <h6>Interview Video</h6>
+              <a class="ml-auto" data-toggle="collapse" href="#video-available" role="button" aria-expanded="false" aria-controls="located"> <i class="fas fa-chevron-down"></i></a>
+            </div>
+            <div class="collapse " id="video-available">
+              <div class="widget-content">
+                                <div class="custom-control custom-checkbox">
+                  <input type="radio" class="custom-control-input" name="video_available" id="video_available1" checked value=''>
+                  <label class="custom-control-label" for="video_available1">All</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="radio" class="custom-control-input" name="video_available" id="video_available2"  value='Y'>
+                  <label class="custom-control-label" for="video_available2">With Video</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="radio" class="custom-control-input" name="video_available" id="video_available3"   value='N'>
+                  <label class="custom-control-label" for="video_available3">Without Video</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="widget">
+            <div class="widget-title widget-collapse">
+              <h6>Last Active</h6>
+              <a class="ml-auto" data-toggle="collapse" href="#lastactive" role="button" aria-expanded="false" aria-controls="lastactive"> <i class="fas fa-chevron-down"></i></a>
+            </div>
+            <div class="collapse " id="lastactive">
+              <div class="widget-content">
+                                <div class="custom-control custom-checkbox">
+                  <input type="radio" class="custom-control-input" name="tillActive" id="lastactive0" checked value="0">
+                  <label class="custom-control-label" for="lastactive0">All</label>
+                </div>
+                                <div class="custom-control custom-checkbox">
+                  <input type="radio" class="custom-control-input" name="tillActive" id="lastactive7"  value="7">
+                  <label class="custom-control-label" for="lastactive7">7 days</label>
+                </div>
+                                <div class="custom-control custom-checkbox">
+                  <input type="radio" class="custom-control-input" name="tillActive" id="lastactive14"  value="14">
+                  <label class="custom-control-label" for="lastactive14">2 weeks</label>
+                </div>
+                                <div class="custom-control custom-checkbox">
+                  <input type="radio" class="custom-control-input" name="tillActive" id="lastactive30"  value="30">
+                  <label class="custom-control-label" for="lastactive30">1 Month</label>
+                </div>
+                                <div class="custom-control custom-checkbox">
+                  <input type="radio" class="custom-control-input" name="tillActive" id="lastactive90"  value="90">
+                  <label class="custom-control-label" for="lastactive90">3 Months</label>
+                </div>
+                                <div class="custom-control custom-checkbox">
+                  <input type="radio" class="custom-control-input" name="tillActive" id="lastactive180"  value="180">
+                  <label class="custom-control-label" for="lastactive180">6 Months</label>
+                </div>
+                            </div>
+            </div>
+          </div>
+          <hr>
+         
+
+          <div class="widget">
+            <div class="widget-title widget-collapse">
+              <h6>Hiring Offer</h6>
+              <a class="ml-auto" data-toggle="collapse" href="#hiring_offer" role="button" aria-expanded="false" aria-controls="hiring_offer"> <i class="fas fa-chevron-down"></i> </a>
+            </div>
+            <div class="collapse " id="hiring_offer">
+              <div class="widget form-group select-border">
+                <div class="widget">
+                  <div class="search">            
+                    <input class="form-control mod" type="number" placeholder="Min Range (USD)" name="hiring_offerGT" min="0" value="">
+                  </div>
+                </div>
+                <div class="widget">
+                  <div class="search">             
+                    <input class="form-control mod" type="number" placeholder="Max Range (USD)" name="hiring_offerLT" min="0" value="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">            
+            <button class="form-control btn btn-primary mt-3" style="color:white">Filter</button>     
+      <div class="text-center mt-2"><a onclick="resetForm()" href="#"><i class="far fa-minus-square"></i> Clear All</a></div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-10">
+        <div class="row mb-4">
+          <div class="col-12">
+           
+          </div>
+        </div>
+        <div class="job-filter mb-4 d-sm-flex align-items-center">   
+    <div class="job-alert-bt"> <h6 class="mb-0">Showing 1-15 of <span class="text-primary">51986 Candidates</span></h6> </div>   
+            <div class="job-shortby ml-sm-auto d-flex align-items-center">
+              <div class="form-group mb-0 form-inline">
+                <label class="justify-content-start mr-2"><h6>Per Page :</h6></label>
+                <div class="short-by">
+                  <select class="form-control basic-select" id="perPage" name="perPage">
+                                      <option value="15">15 Entries</option>
+                                      <option value="25">25 Entries</option>
+                                      <option value="50">50 Entries</option>
+                                      <option value="100">100 Entries</option>
+                                      <option value="200">200 Entries</option>
+                                    </select>
+                </div>
+              </div>
+              <div class="form-group mb-0 form-inline">
+                <label class="justify-content-start mr-2"><h6>Sort by :</h6></label>
+                <div class="short-by">
+                  <select class="form-control basic-select" id="sortBy" name="sortBy">
+                                          <option selected="" value="0">Updated</option>
+                                          <option value="1">Newest</option>
+                                      </select>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+        <div class="col-12 sticky">
+        <div class="custom-control custom-checkbox">
+        <div class="container">
+          <div class="row">
+          <div class="col-2 pl-s">
+            <input type="checkbox" class="custom-control-input" id="selst">
+            <label class="custom-control-label" style="top:0.5rem;" for="selst">Select All</label>
+          </div>
+          <div class="col-9 text-center">
+          
+          <button type="button" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-primary  btn-sm mt-0" id="sendMail" onclick="empSendMail()"><i class="fas fa-envelope"></i> Send Email</button>
+          <button type="button" class="btn btn-primary  btn-sm mt-0" onclick="downloadResume()" id="btnDownloadResume"><i class="fas fa-file"></i> Download Resume</button>
+                    </div>
+        </div>
+        </div> 
+        </div>
+        </div> 
+
+            <div class="col-12">
+            <div class="candidate-list"> 
+      <div class="container">
+         <div class="row">     
+          <div class="col-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input resume-checkbox" id="sel_67ee80767b989a03057b1d45">
+              <label class="custom-control-label" for="sel_67ee80767b989a03057b1d45"></label>
+           </div>
+          </div>          
+          <div class="col-9">
+          <div class="candidate-list-details">
+            <div class="candidate-list-info">
+                <div class="candidate-list-title">
+                <h5 class="mb-0">
+                  <a target="_blank" href="https://www.tekjobs.net/employer/searchResume/resume/67ee80767b989a03057b1d45" class="margin-right: 0.5rem!important;">
+                    Victor                  </a>
+                                                     </h5>
+                </div>
+              <div class="row">
+             
+              
+                <div class="col-6"><i class="fas fa-user pr-1 list-footer-skill"></i>Salesforce Business Analyst                </div>
+                <div class="col-3"><i class="fas fa-map-marker-alt pr-1 list-footer-place"></i>Frisco, TX</li></div>
+                <div class="col-3"><i class="fas fa-globe-americas pr-1 list-footer-reloc"></i></div>
+                <!-- <div class="col"></div>        -->
+             
+              </div>
+            </div>
+            </div>
+      <div class="row mt-1">           
+            <div class="col">
+                          <i class="fas fa-briefcase pr-1 list-footer-exp"></i>22.04 years            </div>
+            <div class="col">
+                            <i class="fas fa-dollar-sign pr-1 list-footer-salary"></i>            </div>            
+            <div class="col">
+                            <i class="fas fa-file-alt pr-1 list-footer-tax"></i>W2            </div>
+            <div class="col">
+              <i class="fab fa-cc-visa pr-1 list-footer-visa"></i>US Citizen            </div>
+        </div>
+          </div>
+          <div class="col-2">
+            <div class="candidate-list-favourite-time"> 
+              <ul class="list-unstyle"> 
+              <li><a class="candidate-list-favourite order-2" href="#" data-toggle="modal" data-target="#exampleModalCenter" onclick="empSendMail('67ee80767b989a03057b1d45')"><i class="fas fa-envelope"></i></a><br /></li>
+                            <li><a class="candidate-list-favourite order-2" onclick="downloadResume('67ee80767b989a03057b1d45')"><i class="fas fa-download"></i></a><br /></li>
+                                    </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+          </div>   
+      </div>
+     <!--// Emply List -->
+                <div class="col-12">
+            <div class="candidate-list"> 
+      <div class="container">
+         <div class="row">     
+          <div class="col-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input resume-checkbox" id="sel_67ee7f523e4b997be8031d83">
+              <label class="custom-control-label" for="sel_67ee7f523e4b997be8031d83"></label>
+           </div>
+          </div>          
+          <div class="col-9">
+          <div class="candidate-list-details">
+            <div class="candidate-list-info">
+                <div class="candidate-list-title">
+                <h5 class="mb-0">
+                  <a target="_blank" href="https://www.tekjobs.net/employer/searchResume/resume/67ee7f523e4b997be8031d83" class="margin-right: 0.5rem!important;">
+                    Randy Robert                  </a>
+                                                     </h5>
+                </div>
+              <div class="row">
+             
+              
+                <div class="col-6"><i class="fas fa-user pr-1 list-footer-skill"></i>Program Management Consultant                </div>
+                <div class="col-3"><i class="fas fa-map-marker-alt pr-1 list-footer-place"></i>Austin, TX</li></div>
+                <div class="col-3"><i class="fas fa-globe-americas pr-1 list-footer-reloc"></i></div>
+                <!-- <div class="col"></div>        -->
+             
+              </div>
+            </div>
+            </div>
+      <div class="row mt-1">           
+            <div class="col">
+                          <i class="fas fa-briefcase pr-1 list-footer-exp"></i>20.07 years            </div>
+            <div class="col">
+                            <i class="fas fa-dollar-sign pr-1 list-footer-salary"></i>0/Hourly            </div>            
+            <div class="col">
+                            <i class="fas fa-file-alt pr-1 list-footer-tax"></i>W2            </div>
+            <div class="col">
+              <i class="fab fa-cc-visa pr-1 list-footer-visa"></i>US Citizen            </div>
+        </div>
+          </div>
+          <div class="col-2">
+            <div class="candidate-list-favourite-time"> 
+              <ul class="list-unstyle"> 
+              <li><a class="candidate-list-favourite order-2" href="#" data-toggle="modal" data-target="#exampleModalCenter" onclick="empSendMail('67ee7f523e4b997be8031d83')"><i class="fas fa-envelope"></i></a><br /></li>
+                            <li><a class="candidate-list-favourite order-2" onclick="downloadResume('67ee7f523e4b997be8031d83')"><i class="fas fa-download"></i></a><br /></li>
+                                    </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+          </div>   
+      </div>
+     <!--// Emply List -->
+                <div class="col-12">
+            <div class="candidate-list"> 
+      <div class="container">
+         <div class="row">     
+          <div class="col-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input resume-checkbox" id="sel_67ee7e560911ac65d2569b43">
+              <label class="custom-control-label" for="sel_67ee7e560911ac65d2569b43"></label>
+           </div>
+          </div>          
+          <div class="col-9">
+          <div class="candidate-list-details">
+            <div class="candidate-list-info">
+                <div class="candidate-list-title">
+                <h5 class="mb-0">
+                  <a target="_blank" href="https://www.tekjobs.net/employer/searchResume/resume/67ee7e560911ac65d2569b43" class="margin-right: 0.5rem!important;">
+                    VIOLET                  </a>
+                                                     </h5>
+                </div>
+              <div class="row">
+             
+              
+                <div class="col-6"><i class="fas fa-user pr-1 list-footer-skill"></i>Scrum Master/Project Manager                </div>
+                <div class="col-3"><i class="fas fa-map-marker-alt pr-1 list-footer-place"></i>Severn, MD</li></div>
+                <div class="col-3"><i class="fas fa-globe-americas pr-1 list-footer-reloc"></i></div>
+                <!-- <div class="col"></div>        -->
+             
+              </div>
+            </div>
+            </div>
+      <div class="row mt-1">           
+            <div class="col">
+                          <i class="fas fa-briefcase pr-1 list-footer-exp"></i>13 years            </div>
+            <div class="col">
+                            <i class="fas fa-dollar-sign pr-1 list-footer-salary"></i>            </div>            
+            <div class="col">
+                            <i class="fas fa-file-alt pr-1 list-footer-tax"></i>W2            </div>
+            <div class="col">
+              <i class="fab fa-cc-visa pr-1 list-footer-visa"></i>US Citizen            </div>
+        </div>
+          </div>
+          <div class="col-2">
+            <div class="candidate-list-favourite-time"> 
+              <ul class="list-unstyle"> 
+              <li><a class="candidate-list-favourite order-2" href="#" data-toggle="modal" data-target="#exampleModalCenter" onclick="empSendMail('67ee7e560911ac65d2569b43')"><i class="fas fa-envelope"></i></a><br /></li>
+                            <li><a class="candidate-list-favourite order-2" onclick="downloadResume('67ee7e560911ac65d2569b43')"><i class="fas fa-download"></i></a><br /></li>
+                                    </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+          </div>   
+      </div>
+     <!--// Emply List -->
+                <div class="col-12">
+            <div class="candidate-list"> 
+      <div class="container">
+         <div class="row">     
+          <div class="col-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input resume-checkbox" id="sel_67ec26591e16365d03531572">
+              <label class="custom-control-label" for="sel_67ec26591e16365d03531572"></label>
+           </div>
+          </div>          
+          <div class="col-9">
+          <div class="candidate-list-details">
+            <div class="candidate-list-info">
+                <div class="candidate-list-title">
+                <h5 class="mb-0">
+                  <a target="_blank" href="https://www.tekjobs.net/employer/searchResume/resume/67ec26591e16365d03531572" class="margin-right: 0.5rem!important;">
+                    Tayong                  </a>
+                                                     </h5>
+                </div>
+              <div class="row">
+             
+              
+                <div class="col-6"><i class="fas fa-user pr-1 list-footer-skill"></i>Agile Coach                </div>
+                <div class="col-3"><i class="fas fa-map-marker-alt pr-1 list-footer-place"></i>Rowlett, TX</li></div>
+                <div class="col-3"><i class="fas fa-globe-americas pr-1 list-footer-reloc"></i></div>
+                <!-- <div class="col"></div>        -->
+             
+              </div>
+            </div>
+            </div>
+      <div class="row mt-1">           
+            <div class="col">
+                          <i class="fas fa-briefcase pr-1 list-footer-exp"></i>12 years            </div>
+            <div class="col">
+                            <i class="fas fa-dollar-sign pr-1 list-footer-salary"></i>            </div>            
+            <div class="col">
+                            <i class="fas fa-file-alt pr-1 list-footer-tax"></i>W2            </div>
+            <div class="col">
+              <i class="fab fa-cc-visa pr-1 list-footer-visa"></i>US Citizen            </div>
+        </div>
+          </div>
+          <div class="col-2">
+            <div class="candidate-list-favourite-time"> 
+              <ul class="list-unstyle"> 
+              <li><a class="candidate-list-favourite order-2" href="#" data-toggle="modal" data-target="#exampleModalCenter" onclick="empSendMail('67ec26591e16365d03531572')"><i class="fas fa-envelope"></i></a><br /></li>
+                            <li><a class="candidate-list-favourite order-2" onclick="downloadResume('67ec26591e16365d03531572')"><i class="fas fa-download"></i></a><br /></li>
+                                    </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+          </div>   
+      </div>
+     <!--// Emply List -->
+                <div class="col-12">
+            <div class="candidate-list"> 
+      <div class="container">
+         <div class="row">     
+          <div class="col-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input resume-checkbox" id="sel_67ec24b00ca4171d13757b52">
+              <label class="custom-control-label" for="sel_67ec24b00ca4171d13757b52"></label>
+           </div>
+          </div>          
+          <div class="col-9">
+          <div class="candidate-list-details">
+            <div class="candidate-list-info">
+                <div class="candidate-list-title">
+                <h5 class="mb-0">
+                  <a target="_blank" href="https://www.tekjobs.net/employer/searchResume/resume/67ec24b00ca4171d13757b52" class="margin-right: 0.5rem!important;">
+                    Sean Walker                  </a>
+                                                     </h5>
+                </div>
+              <div class="row">
+             
+              
+                <div class="col-6"><i class="fas fa-user pr-1 list-footer-skill"></i>Salesforce Consultant/Owner                </div>
+                <div class="col-3"><i class="fas fa-map-marker-alt pr-1 list-footer-place"></i>Bainbridge Island, WA</li></div>
+                <div class="col-3"><i class="fas fa-globe-americas pr-1 list-footer-reloc"></i></div>
+                <!-- <div class="col"></div>        -->
+             
+              </div>
+            </div>
+            </div>
+      <div class="row mt-1">           
+            <div class="col">
+                          <i class="fas fa-briefcase pr-1 list-footer-exp"></i>22.03 years            </div>
+            <div class="col">
+                            <i class="fas fa-dollar-sign pr-1 list-footer-salary"></i>            </div>            
+            <div class="col">
+                            <i class="fas fa-file-alt pr-1 list-footer-tax"></i>W2            </div>
+            <div class="col">
+              <i class="fab fa-cc-visa pr-1 list-footer-visa"></i>US Citizen            </div>
+        </div>
+          </div>
+          <div class="col-2">
+            <div class="candidate-list-favourite-time"> 
+              <ul class="list-unstyle"> 
+              <li><a class="candidate-list-favourite order-2" href="#" data-toggle="modal" data-target="#exampleModalCenter" onclick="empSendMail('67ec24b00ca4171d13757b52')"><i class="fas fa-envelope"></i></a><br /></li>
+                            <li><a class="candidate-list-favourite order-2" onclick="downloadResume('67ec24b00ca4171d13757b52')"><i class="fas fa-download"></i></a><br /></li>
+                                    </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+          </div>   
+      </div>
+     <!--// Emply List -->
+                <div class="col-12">
+            <div class="candidate-list"> 
+      <div class="container">
+         <div class="row">     
+          <div class="col-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input resume-checkbox" id="sel_67ec198e4b9114423e292153">
+              <label class="custom-control-label" for="sel_67ec198e4b9114423e292153"></label>
+           </div>
+          </div>          
+          <div class="col-9">
+          <div class="candidate-list-details">
+            <div class="candidate-list-info">
+                <div class="candidate-list-title">
+                <h5 class="mb-0">
+                  <a target="_blank" href="https://www.tekjobs.net/employer/searchResume/resume/67ec198e4b9114423e292153" class="margin-right: 0.5rem!important;">
+                    Norman                  </a>
+                                                     </h5>
+                </div>
+              <div class="row">
+             
+              
+                <div class="col-6"><i class="fas fa-user pr-1 list-footer-skill"></i>Salesforce Administrator                </div>
+                <div class="col-3"><i class="fas fa-map-marker-alt pr-1 list-footer-place"></i>Palm Beach, FL</li></div>
+                <div class="col-3"><i class="fas fa-globe-americas pr-1 list-footer-reloc"></i></div>
+                <!-- <div class="col"></div>        -->
+             
+              </div>
+            </div>
+            </div>
+      <div class="row mt-1">           
+            <div class="col">
+                          <i class="fas fa-briefcase pr-1 list-footer-exp"></i>15.06 years            </div>
+            <div class="col">
+                            <i class="fas fa-dollar-sign pr-1 list-footer-salary"></i>0/Hourly            </div>            
+            <div class="col">
+                            <i class="fas fa-file-alt pr-1 list-footer-tax"></i>W2, 1099            </div>
+            <div class="col">
+              <i class="fab fa-cc-visa pr-1 list-footer-visa"></i>US Citizen            </div>
+        </div>
+          </div>
+          <div class="col-2">
+            <div class="candidate-list-favourite-time"> 
+              <ul class="list-unstyle"> 
+              <li><a class="candidate-list-favourite order-2" href="#" data-toggle="modal" data-target="#exampleModalCenter" onclick="empSendMail('67ec198e4b9114423e292153')"><i class="fas fa-envelope"></i></a><br /></li>
+                            <li><a class="candidate-list-favourite order-2" onclick="downloadResume('67ec198e4b9114423e292153')"><i class="fas fa-download"></i></a><br /></li>
+                                    </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+          </div>   
+      </div>
+     <!--// Emply List -->
+                <div class="col-12">
+            <div class="candidate-list"> 
+      <div class="container">
+         <div class="row">     
+          <div class="col-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input resume-checkbox" id="sel_67ec12d2419d8a7d0a6bc662">
+              <label class="custom-control-label" for="sel_67ec12d2419d8a7d0a6bc662"></label>
+           </div>
+          </div>          
+          <div class="col-9">
+          <div class="candidate-list-details">
+            <div class="candidate-list-info">
+                <div class="candidate-list-title">
+                <h5 class="mb-0">
+                  <a target="_blank" href="https://www.tekjobs.net/employer/searchResume/resume/67ec12d2419d8a7d0a6bc662" class="margin-right: 0.5rem!important;">
+                    Kevin Chetty                  </a>
+                                                     </h5>
+                </div>
+              <div class="row">
+             
+              
+                <div class="col-6"><i class="fas fa-user pr-1 list-footer-skill"></i>Senior DevOps Engineer                </div>
+                <div class="col-3"><i class="fas fa-map-marker-alt pr-1 list-footer-place"></i>Jacksonville Beach, FL</li></div>
+                <div class="col-3"><i class="fas fa-globe-americas pr-1 list-footer-reloc"></i></div>
+                <!-- <div class="col"></div>        -->
+             
+              </div>
+            </div>
+            </div>
+      <div class="row mt-1">           
+            <div class="col">
+                          <i class="fas fa-briefcase pr-1 list-footer-exp"></i>6 years            </div>
+            <div class="col">
+                            <i class="fas fa-dollar-sign pr-1 list-footer-salary"></i>/Hourly            </div>            
+            <div class="col">
+                            <i class="fas fa-file-alt pr-1 list-footer-tax"></i>W2            </div>
+            <div class="col">
+              <i class="fab fa-cc-visa pr-1 list-footer-visa"></i>US Citizen            </div>
+        </div>
+          </div>
+          <div class="col-2">
+            <div class="candidate-list-favourite-time"> 
+              <ul class="list-unstyle"> 
+              <li><a class="candidate-list-favourite order-2" href="#" data-toggle="modal" data-target="#exampleModalCenter" onclick="empSendMail('67ec12d2419d8a7d0a6bc662')"><i class="fas fa-envelope"></i></a><br /></li>
+                            <li><a class="candidate-list-favourite order-2" onclick="downloadResume('67ec12d2419d8a7d0a6bc662')"><i class="fas fa-download"></i></a><br /></li>
+                                    </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+          </div>   
+      </div>
+     <!--// Emply List -->
+                <div class="col-12">
+            <div class="candidate-list"> 
+      <div class="container">
+         <div class="row">     
+          <div class="col-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input resume-checkbox" id="sel_67ec0f6852d94274c3264952">
+              <label class="custom-control-label" for="sel_67ec0f6852d94274c3264952"></label>
+           </div>
+          </div>          
+          <div class="col-9">
+          <div class="candidate-list-details">
+            <div class="candidate-list-info">
+                <div class="candidate-list-title">
+                <h5 class="mb-0">
+                  <a target="_blank" href="https://www.tekjobs.net/employer/searchResume/resume/67ec0f6852d94274c3264952" class="margin-right: 0.5rem!important;">
+                    JIGAR DESAI                  </a>
+                                                     </h5>
+                </div>
+              <div class="row">
+             
+              
+                <div class="col-6"><i class="fas fa-user pr-1 list-footer-skill"></i>Sr. Scrum Master/ Sr. Project Manager                </div>
+                <div class="col-3"><i class="fas fa-map-marker-alt pr-1 list-footer-place"></i>Bridgewater, NJ</li></div>
+                <div class="col-3"><i class="fas fa-globe-americas pr-1 list-footer-reloc"></i></div>
+                <!-- <div class="col"></div>        -->
+             
+              </div>
+            </div>
+            </div>
+      <div class="row mt-1">           
+            <div class="col">
+                          <i class="fas fa-briefcase pr-1 list-footer-exp"></i>10.05 years            </div>
+            <div class="col">
+                            <i class="fas fa-dollar-sign pr-1 list-footer-salary"></i>            </div>            
+            <div class="col">
+                            <i class="fas fa-file-alt pr-1 list-footer-tax"></i>W2            </div>
+            <div class="col">
+              <i class="fab fa-cc-visa pr-1 list-footer-visa"></i>US Citizen            </div>
+        </div>
+          </div>
+          <div class="col-2">
+            <div class="candidate-list-favourite-time"> 
+              <ul class="list-unstyle"> 
+              <li><a class="candidate-list-favourite order-2" href="#" data-toggle="modal" data-target="#exampleModalCenter" onclick="empSendMail('67ec0f6852d94274c3264952')"><i class="fas fa-envelope"></i></a><br /></li>
+                            <li><a class="candidate-list-favourite order-2" onclick="downloadResume('67ec0f6852d94274c3264952')"><i class="fas fa-download"></i></a><br /></li>
+                                    </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+          </div>   
+      </div>
+     <!--// Emply List -->
+                <div class="col-12">
+            <div class="candidate-list"> 
+      <div class="container">
+         <div class="row">     
+          <div class="col-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input resume-checkbox" id="sel_67ec0c4b583231479d46a5a5">
+              <label class="custom-control-label" for="sel_67ec0c4b583231479d46a5a5"></label>
+           </div>
+          </div>          
+          <div class="col-9">
+          <div class="candidate-list-details">
+            <div class="candidate-list-info">
+                <div class="candidate-list-title">
+                <h5 class="mb-0">
+                  <a target="_blank" href="https://www.tekjobs.net/employer/searchResume/resume/67ec0c4b583231479d46a5a5" class="margin-right: 0.5rem!important;">
+                    Felix                  </a>
+                                                     </h5>
+                </div>
+              <div class="row">
+             
+              
+                <div class="col-6"><i class="fas fa-user pr-1 list-footer-skill"></i>Oracle PL/SQL Developer                </div>
+                <div class="col-3"><i class="fas fa-map-marker-alt pr-1 list-footer-place"></i>Cocoa, FL</li></div>
+                <div class="col-3"><i class="fas fa-globe-americas pr-1 list-footer-reloc"></i>GA, NJ, NC, TX-USA</div>
+                <!-- <div class="col"></div>        -->
+             
+              </div>
+            </div>
+            </div>
+      <div class="row mt-1">           
+            <div class="col">
+                          <i class="fas fa-briefcase pr-1 list-footer-exp"></i>20.03 years            </div>
+            <div class="col">
+                            <i class="fas fa-dollar-sign pr-1 list-footer-salary"></i>            </div>            
+            <div class="col">
+                            <i class="fas fa-file-alt pr-1 list-footer-tax"></i>W2            </div>
+            <div class="col">
+              <i class="fab fa-cc-visa pr-1 list-footer-visa"></i>US Citizen            </div>
+        </div>
+          </div>
+          <div class="col-2">
+            <div class="candidate-list-favourite-time"> 
+              <ul class="list-unstyle"> 
+              <li><a class="candidate-list-favourite order-2" href="#" data-toggle="modal" data-target="#exampleModalCenter" onclick="empSendMail('67ec0c4b583231479d46a5a5')"><i class="fas fa-envelope"></i></a><br /></li>
+                            <li><a class="candidate-list-favourite order-2" onclick="downloadResume('67ec0c4b583231479d46a5a5')"><i class="fas fa-download"></i></a><br /></li>
+                                    </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+          </div>   
+      </div>
+     <!--// Emply List -->
+                <div class="col-12">
+            <div class="candidate-list"> 
+      <div class="container">
+         <div class="row">     
+          <div class="col-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input resume-checkbox" id="sel_67ec010463e6b450da12acc6">
+              <label class="custom-control-label" for="sel_67ec010463e6b450da12acc6"></label>
+           </div>
+          </div>          
+          <div class="col-9">
+          <div class="candidate-list-details">
+            <div class="candidate-list-info">
+                <div class="candidate-list-title">
+                <h5 class="mb-0">
+                  <a target="_blank" href="https://www.tekjobs.net/employer/searchResume/resume/67ec010463e6b450da12acc6" class="margin-right: 0.5rem!important;">
+                    AHMED SOHAIL                  </a>
+                                                     </h5>
+                </div>
+              <div class="row">
+             
+              
+                <div class="col-6"><i class="fas fa-user pr-1 list-footer-skill"></i>Senior Salesforce Admin                </div>
+                <div class="col-3"><i class="fas fa-map-marker-alt pr-1 list-footer-place"></i>Richardson, TX</li></div>
+                <div class="col-3"><i class="fas fa-globe-americas pr-1 list-footer-reloc"></i></div>
+                <!-- <div class="col"></div>        -->
+             
+              </div>
+            </div>
+            </div>
+      <div class="row mt-1">           
+            <div class="col">
+                          <i class="fas fa-briefcase pr-1 list-footer-exp"></i>9.03 years            </div>
+            <div class="col">
+                            <i class="fas fa-dollar-sign pr-1 list-footer-salary"></i>            </div>            
+            <div class="col">
+                            <i class="fas fa-file-alt pr-1 list-footer-tax"></i>W2            </div>
+            <div class="col">
+              <i class="fab fa-cc-visa pr-1 list-footer-visa"></i>US Citizen            </div>
+        </div>
+          </div>
+          <div class="col-2">
+            <div class="candidate-list-favourite-time"> 
+              <ul class="list-unstyle"> 
+              <li><a class="candidate-list-favourite order-2" href="#" data-toggle="modal" data-target="#exampleModalCenter" onclick="empSendMail('67ec010463e6b450da12acc6')"><i class="fas fa-envelope"></i></a><br /></li>
+                            <li><a class="candidate-list-favourite order-2" onclick="downloadResume('67ec010463e6b450da12acc6')"><i class="fas fa-download"></i></a><br /></li>
+                                    </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+          </div>   
+      </div>
+     <!--// Emply List -->
+                <div class="col-12">
+            <div class="candidate-list"> 
+      <div class="container">
+         <div class="row">     
+          <div class="col-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input resume-checkbox" id="sel_682f806cb859824ae70afb02">
+              <label class="custom-control-label" for="sel_682f806cb859824ae70afb02"></label>
+           </div>
+          </div>          
+          <div class="col-9">
+          <div class="candidate-list-details">
+            <div class="candidate-list-info">
+                <div class="candidate-list-title">
+                <h5 class="mb-0">
+                  <a target="_blank" href="https://www.tekjobs.net/employer/searchResume/resume/682f806cb859824ae70afb02" class="margin-right: 0.5rem!important;">
+                    Mukesh Goud                  </a>
+                                                     </h5>
+                </div>
+              <div class="row">
+             
+              
+                <div class="col-6"><i class="fas fa-user pr-1 list-footer-skill"></i>AWS DevOps Engineer                </div>
+                <div class="col-3"><i class="fas fa-map-marker-alt pr-1 list-footer-place"></i>Angleton, TX</li></div>
+                <div class="col-3"><i class="fas fa-globe-americas pr-1 list-footer-reloc"></i></div>
+                <!-- <div class="col"></div>        -->
+             
+              </div>
+            </div>
+            </div>
+      <div class="row mt-1">           
+            <div class="col">
+                          <i class="fas fa-briefcase pr-1 list-footer-exp"></i>5.05 years            </div>
+            <div class="col">
+                            <i class="fas fa-dollar-sign pr-1 list-footer-salary"></i>0/Hourly            </div>            
+            <div class="col">
+                            <i class="fas fa-file-alt pr-1 list-footer-tax"></i>C2C            </div>
+            <div class="col">
+              <i class="fab fa-cc-visa pr-1 list-footer-visa"></i>H1B            </div>
+        </div>
+          </div>
+          <div class="col-2">
+            <div class="candidate-list-favourite-time"> 
+              <ul class="list-unstyle"> 
+              <li><a class="candidate-list-favourite order-2" href="#" data-toggle="modal" data-target="#exampleModalCenter" onclick="empSendMail('682f806cb859824ae70afb02')"><i class="fas fa-envelope"></i></a><br /></li>
+                            <li><a class="candidate-list-favourite order-2" onclick="downloadResume('682f806cb859824ae70afb02')"><i class="fas fa-download"></i></a><br /></li>
+                                    </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+          </div>   
+      </div>
+     <!--// Emply List -->
+                <div class="col-12">
+            <div class="candidate-list"> 
+      <div class="container">
+         <div class="row">     
+          <div class="col-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input resume-checkbox" id="sel_6644cd92bd83213c64045d06">
+              <label class="custom-control-label" for="sel_6644cd92bd83213c64045d06"></label>
+           </div>
+          </div>          
+          <div class="col-9">
+          <div class="candidate-list-details">
+            <div class="candidate-list-info">
+                <div class="candidate-list-title">
+                <h5 class="mb-0">
+                  <a target="_blank" href="https://www.tekjobs.net/employer/searchResume/resume/6644cd92bd83213c64045d06" class="margin-right: 0.5rem!important;">
+                    Zeenat                  </a>
+                                                     </h5>
+                </div>
+              <div class="row">
+             
+              
+                <div class="col-6"><i class="fas fa-user pr-1 list-footer-skill"></i>Senior Test Analyst, Business Analyst                </div>
+                <div class="col-3"><i class="fas fa-map-marker-alt pr-1 list-footer-place"></i>Louisville, KY - 40018</li></div>
+                <div class="col-3"><i class="fas fa-globe-americas pr-1 list-footer-reloc"></i>Open to All-USA</div>
+                <!-- <div class="col"></div>        -->
+             
+              </div>
+            </div>
+            </div>
+      <div class="row mt-1">           
+            <div class="col">
+                          <i class="fas fa-briefcase pr-1 list-footer-exp"></i>9 years            </div>
+            <div class="col">
+                            <i class="fas fa-dollar-sign pr-1 list-footer-salary"></i>/Hourly            </div>            
+            <div class="col">
+                            <i class="fas fa-file-alt pr-1 list-footer-tax"></i>W2, C2C            </div>
+            <div class="col">
+              <i class="fab fa-cc-visa pr-1 list-footer-visa"></i>H1B            </div>
+        </div>
+          </div>
+          <div class="col-2">
+            <div class="candidate-list-favourite-time"> 
+              <ul class="list-unstyle"> 
+              <li><a class="candidate-list-favourite order-2" href="#" data-toggle="modal" data-target="#exampleModalCenter" onclick="empSendMail('6644cd92bd83213c64045d06')"><i class="fas fa-envelope"></i></a><br /></li>
+                            <li><a class="candidate-list-favourite order-2" onclick="downloadResume('6644cd92bd83213c64045d06')"><i class="fas fa-download"></i></a><br /></li>
+                                    </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+          </div>   
+      </div>
+     <!--// Emply List -->
+                <div class="col-12">
+            <div class="candidate-list"> 
+      <div class="container">
+         <div class="row">     
+          <div class="col-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input resume-checkbox" id="sel_6644ccb34b7f7801ff122c52">
+              <label class="custom-control-label" for="sel_6644ccb34b7f7801ff122c52"></label>
+           </div>
+          </div>          
+          <div class="col-9">
+          <div class="candidate-list-details">
+            <div class="candidate-list-info">
+                <div class="candidate-list-title">
+                <h5 class="mb-0">
+                  <a target="_blank" href="https://www.tekjobs.net/employer/searchResume/resume/6644ccb34b7f7801ff122c52" class="margin-right: 0.5rem!important;">
+                    Vinothkumar                  </a>
+                                                     </h5>
+                </div>
+              <div class="row">
+             
+              
+                <div class="col-6"><i class="fas fa-user pr-1 list-footer-skill"></i>Full Stack .Net Developer                </div>
+                <div class="col-3"><i class="fas fa-map-marker-alt pr-1 list-footer-place"></i>Phoenix, AZ - 85001</li></div>
+                <div class="col-3"><i class="fas fa-globe-americas pr-1 list-footer-reloc"></i>Open to All-USA</div>
+                <!-- <div class="col"></div>        -->
+             
+              </div>
+            </div>
+            </div>
+      <div class="row mt-1">           
+            <div class="col">
+                          <i class="fas fa-briefcase pr-1 list-footer-exp"></i>12 years            </div>
+            <div class="col">
+                            <i class="fas fa-dollar-sign pr-1 list-footer-salary"></i>/Hourly            </div>            
+            <div class="col">
+                            <i class="fas fa-file-alt pr-1 list-footer-tax"></i>C2C            </div>
+            <div class="col">
+              <i class="fab fa-cc-visa pr-1 list-footer-visa"></i>H1B            </div>
+        </div>
+          </div>
+          <div class="col-2">
+            <div class="candidate-list-favourite-time"> 
+              <ul class="list-unstyle"> 
+              <li><a class="candidate-list-favourite order-2" href="#" data-toggle="modal" data-target="#exampleModalCenter" onclick="empSendMail('6644ccb34b7f7801ff122c52')"><i class="fas fa-envelope"></i></a><br /></li>
+                            <li><a class="candidate-list-favourite order-2" onclick="downloadResume('6644ccb34b7f7801ff122c52')"><i class="fas fa-download"></i></a><br /></li>
+                                    </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+          </div>   
+      </div>
+     <!--// Emply List -->
+                <div class="col-12">
+            <div class="candidate-list"> 
+      <div class="container">
+         <div class="row">     
+          <div class="col-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input resume-checkbox" id="sel_6644cb9dfbd6ba7554473256">
+              <label class="custom-control-label" for="sel_6644cb9dfbd6ba7554473256"></label>
+           </div>
+          </div>          
+          <div class="col-9">
+          <div class="candidate-list-details">
+            <div class="candidate-list-info">
+                <div class="candidate-list-title">
+                <h5 class="mb-0">
+                  <a target="_blank" href="https://www.tekjobs.net/employer/searchResume/resume/6644cb9dfbd6ba7554473256" class="margin-right: 0.5rem!important;">
+                    Vimal                  </a>
+                                                     </h5>
+                </div>
+              <div class="row">
+             
+              
+                <div class="col-6"><i class="fas fa-user pr-1 list-footer-skill"></i>Project Manager PMP, .NET Technologies                </div>
+                <div class="col-3"><i class="fas fa-map-marker-alt pr-1 list-footer-place"></i>Middletown, DE - 19709</li></div>
+                <div class="col-3"><i class="fas fa-globe-americas pr-1 list-footer-reloc"></i>Open to All-USA</div>
+                <!-- <div class="col"></div>        -->
+             
+              </div>
+            </div>
+            </div>
+      <div class="row mt-1">           
+            <div class="col">
+                          <i class="fas fa-briefcase pr-1 list-footer-exp"></i>18 years            </div>
+            <div class="col">
+                            <i class="fas fa-dollar-sign pr-1 list-footer-salary"></i>/Hourly            </div>            
+            <div class="col">
+                            <i class="fas fa-file-alt pr-1 list-footer-tax"></i>C2C            </div>
+            <div class="col">
+              <i class="fab fa-cc-visa pr-1 list-footer-visa"></i>H1B            </div>
+        </div>
+          </div>
+          <div class="col-2">
+            <div class="candidate-list-favourite-time"> 
+              <ul class="list-unstyle"> 
+              <li><a class="candidate-list-favourite order-2" href="#" data-toggle="modal" data-target="#exampleModalCenter" onclick="empSendMail('6644cb9dfbd6ba7554473256')"><i class="fas fa-envelope"></i></a><br /></li>
+                            <li><a class="candidate-list-favourite order-2" onclick="downloadResume('6644cb9dfbd6ba7554473256')"><i class="fas fa-download"></i></a><br /></li>
+                                    </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+          </div>   
+      </div>
+     <!--// Emply List -->
+                <div class="col-12">
+            <div class="candidate-list"> 
+      <div class="container">
+         <div class="row">     
+          <div class="col-1">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input resume-checkbox" id="sel_6644ca7aff1cdb5ab20077f4">
+              <label class="custom-control-label" for="sel_6644ca7aff1cdb5ab20077f4"></label>
+           </div>
+          </div>          
+          <div class="col-9">
+          <div class="candidate-list-details">
+            <div class="candidate-list-info">
+                <div class="candidate-list-title">
+                <h5 class="mb-0">
+                  <a target="_blank" href="https://www.tekjobs.net/employer/searchResume/resume/6644ca7aff1cdb5ab20077f4" class="margin-right: 0.5rem!important;">
+                    VijayBabu                  </a>
+                                                     </h5>
+                </div>
+              <div class="row">
+             
+              
+                <div class="col-6"><i class="fas fa-user pr-1 list-footer-skill"></i>PowerBI Developer                </div>
+                <div class="col-3"><i class="fas fa-map-marker-alt pr-1 list-footer-place"></i>Texas City, TX - 77510</li></div>
+                <div class="col-3"><i class="fas fa-globe-americas pr-1 list-footer-reloc"></i></div>
+                <!-- <div class="col"></div>        -->
+             
+              </div>
+            </div>
+            </div>
+      <div class="row mt-1">           
+            <div class="col">
+                          <i class="fas fa-briefcase pr-1 list-footer-exp"></i>12 years            </div>
+            <div class="col">
+                            <i class="fas fa-dollar-sign pr-1 list-footer-salary"></i>/Hourly            </div>            
+            <div class="col">
+                            <i class="fas fa-file-alt pr-1 list-footer-tax"></i>C2C            </div>
+            <div class="col">
+              <i class="fab fa-cc-visa pr-1 list-footer-visa"></i>H1B            </div>
+        </div>
+          </div>
+          <div class="col-2">
+            <div class="candidate-list-favourite-time"> 
+              <ul class="list-unstyle"> 
+              <li><a class="candidate-list-favourite order-2" href="#" data-toggle="modal" data-target="#exampleModalCenter" onclick="empSendMail('6644ca7aff1cdb5ab20077f4')"><i class="fas fa-envelope"></i></a><br /></li>
+                            <li><a class="candidate-list-favourite order-2" onclick="downloadResume('6644ca7aff1cdb5ab20077f4')"><i class="fas fa-download"></i></a><br /></li>
+                                    </ul>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+          </div>   
+      </div>
+     <!--// Emply List -->
+          
+        </div>
+        <div class="row">
+          <div class="col-12 text-center mt-4 mt-sm-5">
+            <ul class="pagination justify-content-center mb-0"><li class="paginate_button page-item active"><a href="#" class="page-link">1</a></li><li class="paginate_button page-item"><a href="https://www.tekjobs.net/employer/searchResume/index/2" class="page-link" data-ci-pagination-page="2">2</a></li><li class="paginate_button page-item"><a href="https://www.tekjobs.net/employer/searchResume/index/3" class="page-link" data-ci-pagination-page="3">3</a></li><li class="paginate_button page-item"><a href="https://www.tekjobs.net/employer/searchResume/index/4" class="page-link" data-ci-pagination-page="4">4</a></li><li class="paginate_button page-item"><a href="https://www.tekjobs.net/employer/searchResume/index/2" class="page-link" data-ci-pagination-page="2" rel="next">&raquo;</a></li><li class="paginate_button page-item"><a href="https://www.tekjobs.net/employer/searchResume/index/3466" class="page-link" data-ci-pagination-page="3466">Last &rsaquo;</a></li></ul><!--pagination-->          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</form>
+<section class="space-ptsb"/></section>
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header p-4">
+        <h4 class="mb-0 text-center">Send Email</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <div class="login-register">       
+          <div class="tab-content">
+            <div class="tab-pane active" id="candidate" role="tabpanel">
+              <form class="mt-4" id="formSendMail" method="POST">
+                <div class="form-row">
+                  <div class="form-group col-12">
+                    <label for="Email2">From</label>
+                    <input type="text" class="form-control" name="from" id="from_email" placeholder="Enter Your Email-ID" value="">
+                    <input type="hidden" name="query" value='[]'/>
+                  </div>
+                                    <div class="form-group col-12">
+                    <label for="Email2">Subject</label>
+                    <input type="text" class="form-control" name="subject">
+                    <input type="hidden" id="mongo_ids" name="mongo_ids" value="">
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label>Description</label>
+                    <textarea class="form-control" rows="4" id="emailBody" name="body"></textarea>
+                  </div>
+                                    <div class="form-group col-md-12 mb-0">
+                    <button id="btnSendMail" type="submit" class="btn btn-md btn-primary">Send Email</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+     
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="exampleModalVerifyOTP" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header p-4">
+        <h4 class="mb-0 text-center">Enter Verification Code</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <div class="login-register">
+          <div class="tab-content">
+            <div class="tab-pane active" id="candidate" role="tabpanel">
+              <form class="mt-4" id="formVerifyOTP" method="POST" autocomplete="off">
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label id="labelOTP"></label>
+                    <input type="hidden" id="email_verify" name="email" value="">
+                    <input class="form-control" name="verification_code" required/>
+                    <span id="errorOTP" style="color: red"><span>
+                  </div>
+                  <div class="form-group col-md-12 mb-0">
+                    <button id="btnVerifyOTP" type="submit" class="btn btn-md btn-primary">Verify</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+     
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form id="form_download_resume" method="POST" action="https://www.tekjobs.net/employer/searchResume/downloadResume/" target="_blank">
+    <!-- input type will generate here -->
+  <input type="hidden" name="mongo_ids" id="input_mongo_ids">
+</form>
+
+<form id="form_export_excel" method="POST" action="https://www.tekjobs.net/employer/searchResume/exportExcel/" target="_blank">
+    <!-- input type will generate here -->
+  <input type="hidden" name="mongo_ids" id="excel_list_mongo_ids">
+</form>
+
+<!--=================================
+footer -->
+<footer class="footer bg-light">
+  <!--<div class="position-relative">
+    <svg class="footer-shape"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="100%" height="85px">
+    <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+      d="M-0.000,-0.001 L1923.000,-0.001 L1923.000,84.999 C1608.914,41.669 1279.532,19.653 962.500,19.000 C635.773,18.326 323.692,40.344 -0.000,84.999 C-0.000,-83.334 -0.000,168.332 -0.000,-0.001 Z"/>
+    </svg>
+  </div>-->
+
+  <div class="footer-bottom bg-dark mn-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 ">
+            <div class="d-flex justify-content-md-start justify-content-center">
+             <ul class="list-unstyled d-flex mb-0">
+                <li><a href="https://www.tekjobs.net/privacy">Privacy Notice</a></li>
+                <li><a href="https://www.tekjobs.net/about-us">About</a></li>
+                <li><a href="https://www.tekjobs.net/terms">Terms & Conditions</a></li>
+                <li><a href="https://www.tekjobs.net/contact-us">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        <div class="col-md-6 text-center text-md-right mt-4 mt-md-0">
+          <p class="mb-0"> &copy; <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="#"> TekJobs </a> All Rights Reserved </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--=================================
+footer-->
+
+<!--=================================
+Back To Top-->
+   <!-- <div id="back-to-top" class="back-to-top">
+     <i class="fas fa-angle-up"></i>
+   </div> -->
+<!--=================================
+Back To Top-->
+
+
+<!--=================================
+Javascript -->
+
+    <!-- JS Global Compulsory (Do not remove)-->
+    <script src="https://www.tekjobs.net/assets/js/jquery-3.4.1.min.js"></script>
+    <script src="https://www.tekjobs.net/assets/js/popper/popper.min.js"></script>
+    <script src="https://www.tekjobs.net/assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+    <!-- <script src="https://www.tekjobs.net/assets/js/select2/select2.full.js"></script> -->
+
+    <!-- Template Scripts (Do not remove)-->
+    <!-- <script src="https://www.tekjobs.net/assets/js/custom.js"></script> -->
+	
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        $("#fileInput").on('change', function() {
+          $("#changeImage").submit();
+        });
+
+        $("#changeImage").on('submit', function() {
+          let image_type = $("#image_type").val();
+          let imgId = 'imgProfile';
+          let baseurl = "https://www.tekjobs.net/employer/dashboard/uploadImage/";
+          if(image_type == 'profile') {
+            baseurl = "https://www.tekjobs.net/employer/dashboard/uploadImage/1";
+            imgId = 'imgProfile';
+          }
+          $.ajax({
+            url: baseurl,
+            type: "POST",
+            data:  new FormData(this),
+            contentType: false,
+            cache: false,
+            processData:false,
+            beforeSend : function() {
+              // $("#upload_pencil").prop('disabled', true);
+            },
+            success: function(data) {
+              let jsonData = JSON.parse(data);
+              if(jsonData.hasOwnProperty('success') && jsonData.hasOwnProperty('profile_pic')) {
+                console.log(jsonData.profile_pic);
+                $("#"+imgId).prop('src', jsonData.profile_pic);
+              
+              } else if(jsonData.hasOwnProperty('error')){
+                alert(jsonData.profile_pic);
+              } else {
+                window.location.reload();
+              }
+            }   
+          });
+          return false;
+        });
+
+        $("#formChangePassword").on('submit', function() {
+          const oldPwd = $("#old_password").val();
+          const newPwd = $("#new_password").val();
+          const cnfPwd = $("#cnf_password").val();
+          if(newPwd !== cnfPwd) {
+            $("#errorchangepwd").html('New Password and Confirm Password should be identical');
+          }
+          else if(oldPwd === newPwd) {
+            $("#errorchangepwd").html('Current Password and New Password should not be same');
+          } else {
+            console.log('identical');
+            $("#errorchangepwd").html('');
+            const formData = $("#formChangePassword").serialize();
+            console.log(formData);
+            $.ajax({
+              url: "https://www.tekjobs.net/employer/dashboard/changePassword",
+              type: "POST",
+              data: formData,
+              success: function(data) {
+                // console.log(data);
+                const jsonData = JSON.parse(data);
+                if(jsonData.hasOwnProperty('success')) {
+                  $("#errorchangepwd").html('Successfully updated password');
+                } else if(jsonData.hasOwnProperty('error')) {
+                  $("#errorchangepwd").html(jsonData.error);
+                } else {
+                  $("#errorchangepwd").html('something went wrong');
+                  setTimeout(()=> {
+                    window.location.reoad();
+                  }, 1000);
+                }
+              }
+            });
+          }
+          return false;
+        });
+      });
+    </script>
+</body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script type="text/javascript" src="https://www.tekjobs.net/assets/js/bootstrap-multiselect.js"></script>
+<script src="https://www.tekjobs.net/tinymce/tinymce.min.js"></script>
+
+<script type="text/javascript">
+  let formError = "";
+  let pre_relocation_city = [];
+  if(formError != '') {
+    alert(formError);
+  }
+
+  function empSendMail(currId=0) {
+    let checkedIds = [];
+    if(!currId) {
+      $(".resume-checkbox:checked").each(function() {
+        let currId1 = this.id.split('sel_');
+        checkedIds.push(currId1[1]);
+      })
+    } else {
+      checkedIds.push(currId);
+    }
+    let mongo_ids = '';
+    $.each(checkedIds, function(key, value) {
+      mongo_ids += value+',';
+    });
+    $("#mongo_ids").val(mongo_ids);
+  }
+
+  $("input[name='sendMailTo']").on('change', ()=> {
+    if($("input[name='sendMailTo']:checked").val() === 'E') {
+      $("#sendMailToRecentEntered").prop('disabled', false);
+      $("#sendMailToRecentEntered").prop('required', true);
+    } else {
+      $("#sendMailToRecentEntered").prop('disabled', true);
+      $("#sendMailToRecentEntered").prop('required', false);
+    }
+  })
+
+  function empSendSms(currId=0) {
+    let checkedIds = [];
+    if(!currId) {
+      $(".resume-checkbox:checked").each(function() {
+        let currId1 = this.id.split('sel_');
+        checkedIds.push(currId1[1]);
+      })
+    } else {
+      checkedIds.push(currId);
+    }
+    let mongo_ids = '';
+    $.each(checkedIds, function(key, value) {
+      mongo_ids += value+',';
+    });
+    $("#sms_mongo_ids").val(mongo_ids);
+  }
+
+  function downloadResume(currId=0) {
+    let checkedIds = [];
+    if(!currId) {
+      $(".resume-checkbox:checked").each(function() {
+        let currId1 = this.id.split('sel_');
+        checkedIds.push(currId1[1]);
+      })
+    } else {
+      checkedIds.push(currId);
+    }
+    let mongo_ids = '';
+    $.each(checkedIds, function(key, value) {
+      mongo_ids += value+',';
+    });
+
+    $("#input_mongo_ids").val(mongo_ids);
+    $("#form_download_resume").submit();
+  }
+
+  function exportExcel() {
+    let checkedIds = [];
+    $(".resume-checkbox:checked").each(function() {
+      let currId1 = this.id.split('sel_');
+      checkedIds.push(currId1[1]);
+    })
+    let mongo_ids = '';
+    $.each(checkedIds, function(key, value) {
+      mongo_ids += value+',';
+    });
+
+    $("#excel_list_mongo_ids").val(mongo_ids);
+    $("#form_export_excel").submit();
+  }
+
+  function enableOrDisable() {
+    let checkedCount = $(".resume-checkbox:checked").length;
+    if(checkedCount == 0) {
+      $("#sendMail").attr('disabled','disabled');
+      $("#btnDownloadResume").attr('disabled','disabled');
+      $("#btnSendSMS").attr('disabled','disabled');
+      $("#btnExportList").attr('disabled','disabled');
+    } else {
+      $("#sendMail").removeAttr('disabled');
+      $("#btnDownloadResume").removeAttr('disabled');
+      $("#btnSendSMS").removeAttr('disabled');
+      $("#btnExportList").removeAttr('disabled')
+    }
+  }
+
+  function selectState() {
+    // const countryIds = $("#selectCountry").val();
+    const countryIds = $("input[name='country[]']").val();
+    /*if(countryIds.length > 1 || countryIds.length == 0) {
+      $("#selectoption").html('');
+      $("#selectoption").multiselect('rebuild');
+      return false;
+    } else {
+      countryId = countryIds[0];
+    }*/
+    countryId = countryIds;
+    if(countryId == 0) {
+      window.location.replace('https://www.tekjobs.net/employer/searchResume/index/1/?country=usa');
+    }
+
+    $.ajax({
+      url: "https://www.tekjobs.net/support/getStatesByCountryIdJson",
+      type: "POST",
+      data: { countryId : countryId },
+      success: function(data) {
+        const jsonData = JSON.parse(data);
+        let statesHtml = '';
+        $.each(jsonData, function(key, value) {
+          if(pre_relocation_city.length > 0 && pre_relocation_city.includes(value.stateId)) {
+              statesHtml += '<option value="'+value.stateId+'" selected>'+value.stateName+'</option>';
+          } else {
+              statesHtml += '<option value="'+value.stateId+'">'+value.stateName+'</option>';
+          }
+        });
+        $("#selectoption").html(statesHtml);
+        $("#selectoption").multiselect('rebuild');
+        pre_relocation_city = [];
+      }
+    });
+  }
+
+  $(document).ready(function() {
+    enableOrDisable();
+    selectState();
+
+    $(".page-link").on('click', function() {
+      let currHref = $(this).attr('href');
+      if(currHref != '#') {
+          currHref += '/?country='+"usa";
+          currHref = currHref.replace('index//', 'index/');
+          $("#formCandidateSearch").attr('action', currHref);
+          $("#formCandidateSearch").submit();
+      }
+      return false;
+    });
+
+    $("#visa_select_all").on('change', function() {
+      $("input[name='visa_type[]']").prop('checked', this.checked);
+    })
+
+    $("#status_select_all").on('change', function() {
+      $("input[name='resumeStatus[]']").prop('checked', this.checked);
+    })
+
+    $("#paid_resume_select_all").on('change', function() {
+      $("input[name='paidResume[]']").prop('checked', this.checked);
+    })
+
+    $("#selst").on('change', function() {
+      $('.resume-checkbox').prop('checked', this.checked);
+      enableOrDisable();
+    });
+
+    $(".resume-checkbox").on('change', function(){
+      enableOrDisable();
+    });
+    $("#perPage,#sortBy").on('change', function() {
+      $("#formCandidateSearch").submit();
+    });
+
+    /*$.validator.addMethod("isEmailVerified", function(value, element) {
+        // return this.optional(element) || (parseFloat(value) > 0);
+        if(/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(value)) {
+          $.ajax({
+            url: "https://www.tekjobs.net/support/isVerifiedEmail",
+            data: {email: value},
+            type: "POST",
+            success: function(data) {
+              const jdata = JSON.parse(data);
+              if(jdata.hasOwnProperty('success')) {
+
+              } else {
+                
+              }
+            }
+          })
+        }
+    }, "Email is not verified");
+    */
+
+    $("#formSendMail").validate({
+      rules: {
+        from: {
+          required: true,
+          email: true,
+          // isEmailVerified: true,
+        },
+        subject: {
+          required: true,
+          minlength: 5
+        }
+      },
+      messages: {
+        subject: {
+          required: "Subject is required",
+          minlength: "Subject must be at least 5 characters long"
+        },
+        from: {
+          required: "Please enter a valid email address"
+        },
+        otp: {
+          isCorrect: 'Incorrect OTP',
+        }
+      },
+      submitHandler: function(form) {
+        const email = $("#from_email").val();
+        $.ajax({
+          url: "https://www.tekjobs.net/support/isVerifiedEmail",
+          data: {email},
+          type: "POST",
+          success: function(data) {
+            const jdata = JSON.parse(data);
+            if(jdata.hasOwnProperty('success')) {
+              if(jdata.hasOwnProperty('verification_required') && jdata.verification_required === false) {
+                sendEmailFormSubmit();
+                // alert('form submit');
+              } else {
+                // alert('otp popup');
+                $("#exampleModalCenter").modal('hide');
+                $("#labelOTP").html('We have shared a verification code at '+ email);
+                $("#email_verify").val(email);
+                $("#exampleModalVerifyOTP").modal('show');
+              }
+            } else if(jdata.hasOwnProperty('error')){
+              alert(jdata.error)
+            } else {
+              alert('Something went wrong');
+            }
+          }
+        });
+        /*
+        */
+        return false;
+      }
+    });
+
+    $("#formSendSMS").on('submit', function() {
+      const formData = $("#formSendSMS").serialize();
+      // console.log(formData);
+      $("#btnSendSMS").prop('disabled', true);
+      setTimeout(()=> {
+        $("#btnSendSMS").prop('disabled', false);
+      }, 2000);
+      $.ajax({
+        url: "https://www.tekjobs.net/employer/searchResume/sendSMS",
+        data: formData,
+        type: "POST",
+        success: function(data) {
+          // console.log(data);
+          const jsonData = JSON.parse(data);
+          if(jsonData.hasOwnProperty('success')) {
+            alert('successfully mail send to candidate');
+            $(".close").trigger('click');
+          } else if(jsonData.hasOwnProperty('error')) {
+            alert(jsonData.error);
+          } else {
+            alert('something went wrong');
+          }
+        }
+      });
+      return false;
+    });
+
+    $("#formVerifyOTP").on('submit', function() {
+      const formData = $("#formVerifyOTP").serialize();
+      // console.log(formData);
+      $("#btnVerifyOTP").prop('disabled', true);
+      setTimeout(()=> {
+        $("#btnVerifyOTP").prop('disabled', false);
+      }, 2000);
+      $.ajax({
+        url: "https://www.tekjobs.net/support/verifyOtp",
+        data: formData,
+        type: "POST",
+        success: function(data) {
+          // console.log(data);
+          const jsonData = JSON.parse(data);
+          if(jsonData.hasOwnProperty('success')) {
+            $("#errorOTP").html('');
+            sendEmailFormSubmit();
+            $(".close").trigger('click');
+          } else if(jsonData.hasOwnProperty('error')) {
+            $("#errorOTP").html(jsonData.error)
+          } else {
+            $("#errorOTP").html('something went wrong');
+          }
+        }
+      });
+      return false;
+    });
+
+    $("#shareNDownload_form").on('submit', function(event) {
+      event.preventDefault();
+      const formData = $("#shareNDownload_form").serializeArray();
+      const jsonData = {};
+      formData.forEach(data => {
+        jsonData[data.name] = data.value;
+        // $("#formCandidateSearch").append($(`#shareNDownload_form input=['${data.name}']`));
+      });
+      // console.log(jsonData);
+      $("#downloadNSendMailValues").val(JSON.stringify(jsonData));
+      $("#downloadNSendMailAction").val("downloadNShare");
+      // console.log($("#formCandidateSearch").serialize());
+      $("#formCandidateSearch").submit();
+      $("#downloadNSendMailValues").val("");
+      $("#downloadNSendMailAction").val("");
+    });
+
+    $("#btnDownloadExcelList").on('click', function() {
+      $("#downloadNSendMailAction").val("downloadNShare");
+      $("#formCandidateSearch").submit();
+      $("#downloadNSendMailAction").val("");
+
+    })
+
+  });
+
+  function sendEmailFormSubmit() {
+    const formData = $("#formSendMail").serialize();
+    // console.log(formData);
+    $("#btnSendMail").prop('disabled', true);
+    setTimeout(()=> {
+      $("#btnSendMail").prop('disabled', false);
+    }, 2000);
+    alert('Intializing your request');
+    $(".close").trigger('click');
+    $.ajax({
+      url: "https://www.tekjobs.net/employer/searchResume/sendMail",
+      data: formData,
+      type: "POST",
+      success: function(data) {
+        // console.log(data);
+        const jsonData = JSON.parse(data);
+        if(jsonData.hasOwnProperty('success')) {
+          alert('Processing Your Request');
+          // $(".close").trigger('click');
+        } else if(jsonData.hasOwnProperty('error')) {
+          alert(jsonData.error);
+        } else {
+          alert('something went wrong');
+        }
+      }
+    });
+    return false;
+  }
+
+</script>
+<script>
+$(document).ready(function() {
+//Preloader
+preloaderFadeOutTime = 500;
+function hidePreloader() {
+  var preloader = $('.spinner-wrapper');
+  preloader.fadeOut(preloaderFadeOutTime);
+}
+hidePreloader();
+});
+</script>
+<script type="text/javascript">
+  
+  $('#selectoption').multiselect({
+    includeSelectAllOption: true,
+    nonSelectedText: 'Select States',
+    enableFiltering: true,
+    buttonWidth: '300px'
+  });
+
+  /*$('#selectCountry').multiselect({
+    includeSelectAllOption: true,
+    nonSelectedText: 'Select Countries',
+    enableFiltering: true,
+    buttonWidth: '258px'
+  });*/
+
+  $('#selectCategory').multiselect({
+    includeSelectAllOption: true,
+    nonSelectedText: 'Select Categories',
+    enableFiltering: true,
+    buttonWidth: '300px'
+  });
+
+  $('#organization').multiselect({
+    includeSelectAllOption: true,
+    nonSelectedText: 'Select Organization',
+    enableFiltering: true,
+    buttonWidth: '100%'
+  });
+
+  tinymce.init({
+    selector: "#emailBody",
+    plugins: "lists",
+    width : "100%",
+    height: "400px",
+    toolbar: "undo redo | bold italic underline | fontselect | numlist bullist | cut copy paste | alignleft aligncenter alignright alignjustify | indent outdent",
+    setup: function (editor) {
+      editor.on('change', function () {
+          editor.save();
+      });
+    },
+		relative_urls : false,
+		remove_script_host : false,
+		convert_urls : true,
+  });
+
+  tinymce.init({
+    selector: "#shareNDownload_body",
+    plugins: "lists",
+    width : "100%",
+    height: "400px",
+    toolbar: "undo redo | bold italic underline | fontselect | numlist bullist | cut copy paste | alignleft aligncenter alignright alignjustify | indent outdent",
+    setup: function (editor) {
+      editor.on('change', function () {
+          editor.save();
+      });
+    },
+		relative_urls : false,
+		remove_script_host : false,
+		convert_urls : true,
+  });
+
+  function verifyOTP() {
+    // console.log('verify');
+  }
+
+  function resetForm() {
+    // document.getElementById("formCandidateSearch").reset();
+    $('#visa_select_all').prop('checked', false);
+    $("input[name='visa_type[]']:checkbox").prop('checked',false);
+    $("input[name='paidResume[]']:checkbox").prop('checked',false);
+    $("#organization").multiselect('clearSelection');
+    $("select[name='min_exp']").val("-1");
+    $("select[name='max_exp']").val("-1");
+    $("input[name='minRate']").val("");
+    $("input[name='maxRate']").val("");
+
+    $("select[name='rate_type']").val("");
+    $("input[name='tax_type[]']:checkbox").prop('checked',false);
+    $("input[name='isOnlyLocal']:checked").prop("checked", false);
+
+    $("input[name='relocate'][value='']").prop('checked',true);
+    $("input[name='video_available'][value='']").prop('checked',true);
+    $("input[name='tillActive'][value='0']").prop('checked',true);
+    // $("radio").prop("checked", false);
+    $("#formCandidateSearch").submit();
+  }
+
+</script>

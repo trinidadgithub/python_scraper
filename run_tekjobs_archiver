@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+"""
+Launcher helper for Windows users.
+
+Why this exists:
+Some Windows setups save Python files from Notepad as `*.py.txt`.
+This launcher will run either:
+- tekjobs_archiver.py
+- tekjobs_archiver.py.txt
+
+Usage:
+    python run_tekjobs_archiver.py
+"""
+
+from __future__ import annotations
+
+import subprocess
+import sys
+from pathlib import Path
+
+
+CANDIDATE_NAMES = [
+    "tekjobs_archiver.py",
+    "tekjobs_archiver.py.txt",
+]
+
+
+def find_script() -> Path | None:
+    here = Path.cwd()
+    for name in CANDIDATE_NAMES:
+        candidate = here / name
+        if candidate.exists() and candidate.is_file():
+            return candidate
+    return None
+
+
+def main() -> int:
+    script_path = find_script()
+    if not script_path:
+        print("[ERROR] Could not find tekjobs_archiver.py or tekjobs_archiver.py.txt in this folder.")
+        print("[TIP] Put this launcher in the same folder as your TekJobs script.")
+        return 1
+
+    print(f"[INFO] Starting: {script_path.name}")
+    result = subprocess.run([sys.executable, str(script_path)])
+    return result.returncode
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
